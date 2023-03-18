@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+
+    // Types checking
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Strict rules
+    "alwaysStrict": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+
+    // Modules
+    "baseUrl": "./",
+    "module": "ES2022",
+    "moduleResolution": "node",
+
+    // Language and env
+    "target": "es2022",
+    "jsx": "react",
+
+    // JS
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "isolatedModules": true
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "./node_modules"
+  ]
+}

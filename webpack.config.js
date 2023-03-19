@@ -4,6 +4,7 @@ module.exports = {
 	mode: 'development',
 	devServer: {
 		port: 8080,
+		historyApiFallback: true,
 	},
 	resolve: {
 		modules: ['src', 'node_modules'],

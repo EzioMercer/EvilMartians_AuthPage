@@ -2,6 +2,9 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
+	output: {
+		clean: true,
+	},
 	devServer: {
 		port: 8080,
 		historyApiFallback: true,
@@ -30,7 +33,18 @@ module.exports = {
 			{
 				test: /\.s?css$/,
 				exclude: /node_modules/,
-				use: ['style-loader', 'css-loader', 'sass-loader']
+				use: [
+					{loader: 'style-loader'},
+					{
+						loader: 'css-loader',
+						options: {
+							modules: {
+								localIdentName: '[path][name]__[local]--[hash:base64:8]',
+							}
+						},
+					},
+					{loader: 'sass-loader'},
+				],
 			}
 		],
 	},

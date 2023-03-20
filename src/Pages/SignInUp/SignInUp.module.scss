@@ -1,0 +1,20 @@
+@import 'Helpers/SCSS/Colors.scss';
+
+$border-color: #21262d;
+$background-color: $black;
+
+.form {
+  height: 200px;
+  width: 300px;
+  margin: 16px 0;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  background-color: $background-color;
+}

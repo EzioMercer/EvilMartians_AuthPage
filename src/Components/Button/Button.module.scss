@@ -1,0 +1,11 @@
+@import 'Helpers/SCSS/Colors.scss';
+
+.button {
+  width: 100%;
+  padding: 5px 16px;
+
+  background-color: #238626;
+  color: $white;
+  border: none;
+  border-radius: 6px;
+}

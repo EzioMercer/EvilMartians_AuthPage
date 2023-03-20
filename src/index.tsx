@@ -1,15 +1,18 @@
 import React, {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
+import { Provider } from 'react-redux'
+import './index.module.scss';
 import App from './App';
+import store from './Redux/store';
 
 const rootContainer = document.querySelector('#root');
 
 if (rootContainer === null) throw new Error('Please specify a root container')
 
-const root = createRoot(rootContainer);
-
-root.render(
+createRoot(rootContainer).render(
 	<StrictMode>
-		<App />
+		<Provider store={store}>
+			<App />
+		</Provider>
 	</StrictMode>
 );

@@ -5,6 +5,7 @@
   "main": "src/index.tsx",
   "scripts": {
     "build": "webpack --config webpack.config.js",
+    "build-prod": "webpack --config webpack.config.js --mode production",
     "start": "npm run build && webpack serve"
   },
   "repository": {
@@ -41,8 +42,10 @@
     "webpack-server": "^0.1.2"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.9.0"
   }
 }

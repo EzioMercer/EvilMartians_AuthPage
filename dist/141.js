@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkevilmartians_authpage=self.webpackChunkevilmartians_authpage||[]).push([[141],{3141:(e,t,a)=>{a.r(t),a.d(t,{default:()=>r});var n=a(7294),l=a(9655);const r=function(){return n.createElement(n.Fragment,null,n.createElement("h1",null,"404 Not Found"),n.createElement(l.rU,{to:"/"},"Go Home"))}}}]);

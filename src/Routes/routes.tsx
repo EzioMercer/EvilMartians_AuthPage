@@ -9,19 +9,19 @@ const lazyLoadPage = (Page: string) => async () => {
 const router = createBrowserRouter([
     {
         path: '/',
-        lazy: lazyLoadPage('SignIn'),
+        lazy: lazyLoadPage('Welcome'),
     },
     {
-        path: '/sign-in',
-        lazy: lazyLoadPage('SignIn'),
+        path: '/sign-in-up',
+        lazy: lazyLoadPage('SignInUp'),
     },
     {
-        path: '/sign-up',
-        lazy: lazyLoadPage('SignUp'),
+        path: '/otp',
+        lazy: lazyLoadPage('OTP'),
     },
     {
-        path: '/restore-password',
-        lazy: lazyLoadPage('RestorePassword'),
+        path: '*',
+        lazy: lazyLoadPage('NotFound'),
     }
 ]);
 

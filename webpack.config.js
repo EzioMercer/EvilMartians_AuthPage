@@ -1,8 +1,10 @@
+const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
 	output: {
+		path: path.resolve(__dirname, 'docs'),
 		clean: true,
 	},
 	devServer: {

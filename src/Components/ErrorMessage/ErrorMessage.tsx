@@ -18,6 +18,8 @@ const ErrorMessage = ({
 		case 'auth/weak-password':
 			errorText = 'Password must be at least 6 characters';
 			break;
+		default:
+			errorText = 'Something went wrong';
 	}
 
 	return (

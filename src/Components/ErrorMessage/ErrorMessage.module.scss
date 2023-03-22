@@ -1,0 +1,24 @@
+@import "Helpers/SCSS/Colors.scss";
+@import 'Helpers/SCSS/Shapes.scss';
+
+.error-message {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  margin: 4px 0;
+
+  color: $white;
+  background-color: #372227;
+
+  border-radius: $border-radius;
+  border: 1px solid red;
+
+  button {
+    border: none;
+    cursor: pointer;
+
+    background-color: transparent;
+    color: red;
+  }
+}

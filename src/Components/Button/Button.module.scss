@@ -1,4 +1,5 @@
 @import 'Helpers/SCSS/Colors.scss';
+@import 'Helpers/SCSS/Shapes.scss';
 
 .button {
   width: 100%;
@@ -7,5 +8,5 @@
   background-color: #238626;
   color: $white;
   border: none;
-  border-radius: 6px;
+  border-radius: $border-radius;
 }

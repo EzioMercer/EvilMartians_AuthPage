@@ -1,26 +1,26 @@
 import React, {useEffect} from 'react';
-import {useTypedSelector} from '../../Helpers/Hooks/useTypedSelector';
+import useTypedSelector from '../../Helpers/Hooks/useTypedSelector';
 import {useNavigate} from 'react-router-dom';
-import {useTypedDispatch} from '../../Helpers/Hooks/useTypedDispatch';
-import {signOut} from '../../Redux/Slices/AuthSlice';
+import useTypedDispatch from '../../Helpers/Hooks/useTypedDispatch';
+import {deleteUserData} from '../../Redux/Slices/UserDataSlice';
 import Button from '../../Components/Button/Button';
 
 const Welcome = () => {
 	const navigate = useNavigate();
 	const dispatch = useTypedDispatch();
-	const authData = useTypedSelector(state => state).auth;
+	const userData = useTypedSelector(state => state).userData;
 
 	const handleClick = () => {
-		dispatch(signOut());
+		dispatch(deleteUserData());
 	}
 
 	useEffect(() => {
-		if (!authData.authenticated) navigate('/sign-in-up');
-	}, [authData.authenticated])
+		if (userData.uid === '') navigate('/sign-in-up');
+	}, [userData.uid])
 
 	return (
 		<>
-			<h1>Welcome {authData.newUser ? '' : 'back'} user {authData.email}</h1>
+			<h1>Welcome {userData.newUser ? '' : 'back'} user {userData.email}</h1>
 			<Button text="Sign out" handleClick={handleClick}/>
 		</>
 	)

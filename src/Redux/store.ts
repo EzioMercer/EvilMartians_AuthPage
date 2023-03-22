@@ -1,11 +1,13 @@
 import {configureStore} from '@reduxjs/toolkit';
-import AuthReducer from './Slices/AuthSlice';
 import api from './api';
+import userDataSlice from './Slices/UserDataSlice';
+import LoadingSlice from './Slices/LoadingSlice';
 
 const store = configureStore({
 	reducer: {
-		auth: AuthReducer,
 		[api.reducerPath]: api.reducer,
+		userData: userDataSlice,
+		loading: LoadingSlice,
 	},
 	middleware: (gDM) => gDM().concat(api.middleware),
 });

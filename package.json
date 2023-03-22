@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EzioMercer/EvilMartians_AuthPage.git"
+    "url": "git+https://github.com/EzioMercer/EzioMercer.github.io.git"
   },
   "author": "EzioMercer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EzioMercer/EvilMartians_AuthPage/issues"
+    "url": "https://github.com/EzioMercer/EzioMercer.github.io/issues"
   },
-  "homepage": "https://github.com/EzioMercer/EvilMartians_AuthPage#readme",
+  "homepage": "https://github.com/EzioMercer/EzioMercer.github.io#readme",
   "devDependencies": {
     "@babel/core": "^7.21.3",
     "@babel/plugin-transform-runtime": "^7.21.0",

@@ -59,7 +59,7 @@ const SignIn = () => {
                 removeErrorMessageHandler={() => setMessageCode('')}
             />
             <div className={styles.footer}>
-                <Link to={'/otp'}>Create an account</Link>
+                <Link to={'/sign-up'}>Create an account</Link>
                 <Link to={'/reset-password'}>Forgot password?</Link>
             </div>
         </>

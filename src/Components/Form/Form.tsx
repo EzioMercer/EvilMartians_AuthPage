@@ -1,4 +1,4 @@
-import React, {FormEvent, MouseEventHandler} from 'react';
+import React, {MouseEventHandler, useRef} from 'react';
 import styles from './Form.module.scss';
 import Message from '../Message/Message';
 import Input, {InputProps} from '../Input/Input';
@@ -21,14 +21,14 @@ const Form = ({
 	removeErrorMessageHandler: MouseEventHandler<HTMLButtonElement>,
 }) => {
 	const dispatch = useTypedDispatch();
+	const formRef = useRef(null);
 
-	const onSubmit = async (e: FormEvent) => {
+	const onSubmit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 		e.preventDefault();
 
 		dispatch(changeLoadingState(true));
 
-		const form = e.target as HTMLFormElement;
-		const formData = new FormData(form);
+		const formData = new FormData(formRef.current! as HTMLFormElement);
 		const serializedFormData = serializeFormData(formData);
 
 		await handleSubmit(serializedFormData)
@@ -37,7 +37,8 @@ const Form = ({
 	return (
 		<>
 			{messageCode ? <Message messageCode={messageCode} removeHandler={removeErrorMessageHandler}/> : null}
-			<form className={styles.form} onSubmit={onSubmit}>
+			<form ref={formRef} className={styles.form}>
+				<p>* Required fields</p>
 				{
 					inputs.map(input =>
 						<Input
@@ -50,7 +51,7 @@ const Form = ({
 						/>
 					)
 				}
-				<Button type="submit" text={submitBtnText}/>
+				<Button type="submit" text={submitBtnText} handleClick={onSubmit}/>
 			</form>
 		</>
 	)

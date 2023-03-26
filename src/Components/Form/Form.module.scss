@@ -17,4 +17,10 @@ $background-color: $black;
   border: 1px solid $border-color;
   border-radius: $border-radius;
   background-color: $background-color;
+
+  p {
+    width: 100%;
+    text-align: right;
+    font-size: 0.9rem;
+  }
 }

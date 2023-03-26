@@ -15,11 +15,10 @@ const Input = (props:InputProps) => {
 
 	return (
 		<label className={styles.input}>
-			{props.label}
+			{props.label} {props.required && '*'}
 			<input
 				type={props.type}
 				name={props.name}
-				required={props.required}
 				value={value}
 				onChange={e => setValue(e.target.value)}
 			/>

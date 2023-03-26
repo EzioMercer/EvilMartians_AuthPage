@@ -22,6 +22,10 @@ body {
 
 a {
   text-decoration: none;
+
+  &:visited {
+    color: #c084c0;
+  }
 }
 
 button {

@@ -1,15 +1,15 @@
-export type SerializedFormData = {
+type SerializedFormData = {
 	[key: string]: FormDataEntryValue
 }
 
-const serializeFormData = (formData: FormData) => {
+const serializeFormData = <T>(formData: FormData): T => {
 	const serializedFormData = {} as SerializedFormData;
 
 	for (const [key, value] of formData.entries()) {
 		serializedFormData[key] = value;
 	}
 
-	return serializedFormData;
+	return serializedFormData as T;
 }
 
 export default serializeFormData;

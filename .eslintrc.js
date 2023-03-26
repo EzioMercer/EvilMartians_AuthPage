@@ -1,4 +1,7 @@
 module.exports = {
+	globals: {
+		'IS_PRODUCTION': true
+	},
 	'extends': 'react-app',
 	'plugins': [
 		'react-hooks'

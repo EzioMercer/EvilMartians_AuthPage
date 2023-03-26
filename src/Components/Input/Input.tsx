@@ -1,23 +1,28 @@
 import React, {useState} from 'react';
 import styles from './Input.module.scss';
+import {Nullable} from '../../Helpers/Types/Nullable';
 
-const Input = ({
-	label,
-	type,
-	name,
-	required
-}:{
-	label: string,
-	type: string,
+export type InputProps = {
+	type: 'text' | 'email' | 'password',
 	name: string,
+	label: string,
+	defaultValue?: Nullable<string>,
 	required?: boolean
-}) => {
-	const [value, setValue] = useState('');
+}
+
+const Input = (props:InputProps) => {
+	const [value, setValue] = useState(props.defaultValue ?? 'rovsanbadirxanov@gmail.com');
 
 	return (
-		<label className={styles['input-label']}>
-			{label}
-			<input type={type} name={name} required={required} value={value} onChange={e => setValue(e.target.value)}/>
+		<label className={styles.input}>
+			{props.label}
+			<input
+				type={props.type}
+				name={props.name}
+				required={props.required}
+				value={value}
+				onChange={e => setValue(e.target.value)}
+			/>
 		</label>
 	)
 }

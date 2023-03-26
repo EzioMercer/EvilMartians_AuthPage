@@ -6,14 +6,25 @@ import { getAuth } from 'firebase/auth';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-	apiKey: 'AIzaSyDHxTIbJswy09Zg9a5VXQjb9MIv5-wLrz0',
-	authDomain: 'evilmartiansauth.firebaseapp.com',
-	projectId: 'evilmartiansauth',
-	storageBucket: 'evilmartiansauth.appspot.com',
-	messagingSenderId: '586971057414',
-	appId: '1:586971057414:web:2c4a564f17feb7213a2287'
+const firebaseConfigDev = {
+	apiKey: 'AIzaSyDwYOVoUpihBHPbTQtrwDRyt-UHmsnPytI',
+	authDomain: 'evilmartiansauth-dev.firebaseapp.com',
+	projectId: 'evilmartiansauth-dev',
+	storageBucket: 'evilmartiansauth-dev.appspot.com',
+	messagingSenderId: '474027087835',
+	appId: '1:474027087835:web:d2b74fb762f9e2e57d79fe'
 };
+
+const firebaseConfigProd = {
+	apiKey: 'AIzaSyDV7VOgiNqO49tu_Yi2h80-xPHNBtsKLHw',
+	authDomain: 'evilmartiansauth-prod.firebaseapp.com',
+	projectId: 'evilmartiansauth-prod',
+	storageBucket: 'evilmartiansauth-prod.appspot.com',
+	messagingSenderId: '448827019514',
+	appId: '1:448827019514:web:0a1b07fe649af84c887943'
+}
+
+const firebaseConfig = IS_PRODUCTION ? firebaseConfigProd : firebaseConfigDev;
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

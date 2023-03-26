@@ -1,6 +1,7 @@
 @import 'Helpers/SCSS/Colors.scss';
 
 * {
+  font-family: Nunito, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,5 +11,13 @@ body {
   display: flex;
   justify-content: center;
   color: #fff;
-  background-color: $black;
+  background-color: $dark;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }

@@ -1,12 +1,11 @@
 @import 'Helpers/SCSS/Colors.scss';
 @import 'Helpers/SCSS/Shapes.scss';
 
-$border-color: #21262d;
+$border-color: $gray;
 $background-color: $black;
 
 .form {
-  height: 200px;
-  width: 300px;
+  width: 350px;
   margin: 16px 0;
   padding: 16px;
 

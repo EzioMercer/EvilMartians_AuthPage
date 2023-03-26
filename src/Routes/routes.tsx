@@ -12,12 +12,24 @@ const router = createBrowserRouter([
         lazy: lazyLoadPage('Welcome'),
     },
     {
-        path: '/sign-in-up',
-        lazy: lazyLoadPage('SignInUp'),
+        path: '/sign-in',
+        lazy: lazyLoadPage('SignIn'),
+    },
+    {
+        path: '/sign-up',
+        lazy: lazyLoadPage('SignUp'),
+    },
+    {
+        path: '/reset-password',
+        lazy: lazyLoadPage('ResetPassword'),
     },
     {
         path: '/otp',
         lazy: lazyLoadPage('OTP'),
+    },
+    {
+        path: '/confirm-new-password',
+        lazy: lazyLoadPage('ConfirmNewPassword'),
     },
     {
         path: '*',

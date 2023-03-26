@@ -2,13 +2,13 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {Nullable} from '../../Helpers/Types/Nullable';
 
 export type UserData = {
-	uid: string,
+	uid: Nullable<string>,
 	newUser: boolean,
 	email: Nullable<string>
 }
 
 const initialState: UserData = {
-	uid: '',
+	uid: null,
 	newUser: false,
 	email: null
 }

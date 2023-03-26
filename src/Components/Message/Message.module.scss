@@ -1,7 +1,7 @@
 @import "Helpers/SCSS/Colors.scss";
 @import 'Helpers/SCSS/Shapes.scss';
 
-.error-message {
+.message {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -9,16 +9,31 @@
   margin: 4px 0;
 
   color: $white;
-  background-color: #372227;
 
   border-radius: $border-radius;
-  border: 1px solid red;
+  border: 1px solid;
 
   button {
     border: none;
-    cursor: pointer;
 
     background-color: transparent;
-    color: red;
+  }
+}
+
+.error {
+  background-color: #372227;
+  border-color:$red;
+
+  button {
+    color: $red;
+  }
+}
+
+.success {
+  background-color: #223727;
+  border-color:$green;
+
+  button {
+    color: $green;
   }
 }

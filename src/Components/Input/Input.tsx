@@ -11,7 +11,7 @@ export type InputProps = {
 }
 
 const Input = (props:InputProps) => {
-	const [value, setValue] = useState(props.defaultValue ?? 'rovsanbadirxanov@gmail.com');
+	const [value, setValue] = useState(props.defaultValue ?? '');
 
 	return (
 		<label className={styles.input}>

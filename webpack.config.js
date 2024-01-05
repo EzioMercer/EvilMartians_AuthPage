@@ -68,7 +68,8 @@ module.exports = (env, argv) => {
 				inject: false,
 			}),
 			new webpack.DefinePlugin({
-				IS_PRODUCTION: mode === 'production'
+				IS_PRODUCTION: mode === 'production',
+				PROJECT_NAME: 'Registration'
 			})
 		]
 	}

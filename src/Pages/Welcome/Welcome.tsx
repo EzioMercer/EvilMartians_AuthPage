@@ -15,7 +15,7 @@ const Welcome = () => {
 	}
 
 	useEffect(() => {
-		if (userData.uid === null) navigate('/sign-in');
+		if (userData.uid === null) navigate(`/${PROJECT_NAME}/sign-in`);
 	}, [userData.uid])
 
 	return (

@@ -8,31 +8,31 @@ const lazyLoadPage = (Page: string) => async () => {
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: `/${PROJECT_NAME}/`,
         lazy: lazyLoadPage('Welcome'),
     },
     {
-        path: '/sign-in',
+        path: `/${PROJECT_NAME}/sign-in`,
         lazy: lazyLoadPage('SignIn'),
     },
     {
-        path: '/sign-up',
+        path: `/${PROJECT_NAME}/sign-up`,
         lazy: lazyLoadPage('SignUp'),
     },
     {
-        path: '/reset-password',
+        path: `/${PROJECT_NAME}/reset-password`,
         lazy: lazyLoadPage('ResetPassword'),
     },
     {
-        path: '/otp',
+        path: `/${PROJECT_NAME}/otp`,
         lazy: lazyLoadPage('OTP'),
     },
     {
-        path: '/confirm-new-password',
+        path: `/${PROJECT_NAME}/confirm-new-password`,
         lazy: lazyLoadPage('ConfirmNewPassword'),
     },
     {
-        path: '*',
+        path: `/${PROJECT_NAME}/*`,
         lazy: lazyLoadPage('NotFound'),
     }
 ]);

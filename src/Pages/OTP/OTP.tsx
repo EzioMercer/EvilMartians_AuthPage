@@ -40,7 +40,7 @@ const OTP = () => {
 			return;
 		}
 
-		navigate('/confirm-new-password', {state: otp ?? submitData.otp});
+		navigate(`/${PROJECT_NAME}/confirm-new-password`, {state: otp ?? submitData.otp});
 	};
 
 	useEffect(() => {
@@ -63,8 +63,8 @@ const OTP = () => {
 				removeErrorMessageHandler={() => setMessageCode('')}
 			/>
 			<div className={styles.footer}>
-				<Link to={'/sign-up'}>Create an account</Link>
-				<Link to={'/sign-in'}>Sign in</Link>
+				<Link to={`/${PROJECT_NAME}/sign-up`}>Create an account</Link>
+				<Link to={`/${PROJECT_NAME}/sign-in`}>Sign in</Link>
 			</div>
 		</>
 	);

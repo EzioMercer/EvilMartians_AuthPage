@@ -59,7 +59,7 @@ const SignUp = () => {
 
 		if (data.data) dispatch(saveUserData(data.data));
 
-		navigate('/');
+		navigate(`/${PROJECT_NAME}/`);
 	};
 
 	return (
@@ -72,8 +72,8 @@ const SignUp = () => {
 				removeErrorMessageHandler={() => setMessageCode('')}
 			/>
 			<div className={styles.footer}>
-				<Link to={'/reset-password'}>Forgot password?</Link>
-				<Link to={'/sign-in'}>Sign in</Link>
+				<Link to={`/${PROJECT_NAME}/reset-password`}>Forgot password?</Link>
+				<Link to={`/${PROJECT_NAME}/sign-in`}>Sign in</Link>
 			</div>
 		</>
 	);

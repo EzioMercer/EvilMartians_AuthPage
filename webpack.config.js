@@ -69,7 +69,7 @@ module.exports = (env, argv) => {
 			}),
 			new webpack.DefinePlugin({
 				IS_PRODUCTION: mode === 'production',
-				PROJECT_NAME: 'Registration'
+				PROJECT_NAME: '"Registration"'
 			})
 		]
 	}

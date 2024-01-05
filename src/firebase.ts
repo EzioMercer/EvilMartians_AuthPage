@@ -7,21 +7,21 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfigDev = {
-	apiKey: 'AIzaSyDwYOVoUpihBHPbTQtrwDRyt-UHmsnPytI',
-	authDomain: 'evilmartiansauth-dev.firebaseapp.com',
-	projectId: 'evilmartiansauth-dev',
-	storageBucket: 'evilmartiansauth-dev.appspot.com',
-	messagingSenderId: '474027087835',
-	appId: '1:474027087835:web:d2b74fb762f9e2e57d79fe'
+	apiKey: "AIzaSyDRXCChICL3jqt5CDf0GvKMa-5dR-lUF_A",
+	authDomain: "auth-dev-b18fc.firebaseapp.com",
+	projectId: "auth-dev-b18fc",
+	storageBucket: "auth-dev-b18fc.appspot.com",
+	messagingSenderId: "1076484783249",
+	appId: "1:1076484783249:web:2778e92a5c50c419925330"
 };
 
 const firebaseConfigProd = {
-	apiKey: 'AIzaSyDV7VOgiNqO49tu_Yi2h80-xPHNBtsKLHw',
-	authDomain: 'evilmartiansauth-prod.firebaseapp.com',
-	projectId: 'evilmartiansauth-prod',
-	storageBucket: 'evilmartiansauth-prod.appspot.com',
-	messagingSenderId: '448827019514',
-	appId: '1:448827019514:web:0a1b07fe649af84c887943'
+	apiKey: "AIzaSyBHhf_mRbZ6LAvQknb_Xv6N3RERhr__8Yk",
+	authDomain: "auth-prod-f4430.firebaseapp.com",
+	projectId: "auth-prod-f4430",
+	storageBucket: "auth-prod-f4430.appspot.com",
+	messagingSenderId: "969393081041",
+	appId: "1:969393081041:web:7243d0d1d5a642bd3853f0"
 }
 
 const firebaseConfig = IS_PRODUCTION ? firebaseConfigProd : firebaseConfigDev;
